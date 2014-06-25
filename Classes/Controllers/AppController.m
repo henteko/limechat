@@ -674,7 +674,12 @@
             t = [t stringByAppendingString:@" "];
         }
         else {
-            t = [t stringByAppendingString:@": "];
+            if ([t hasSuffix:@"3"]) {
+                t = [t stringByAppendingString:@": "];
+            }
+            else {
+                t = [t stringByAppendingString:@"-san: "];
+            }
         }
     }
 
